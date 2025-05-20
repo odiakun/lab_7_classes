@@ -2,10 +2,9 @@
 
 ### 1. Clone the repository 
 
-In separate directory clone the [task repository](https://github.com/odiakun/lab_7_classes).
+In separate directory clone the [this repository](https://github.com/odiakun/lab_7_classes).
 
 > This script runs benchmarks LU, CG, EP in both CUDA and CUDA Graphs versions and collects results.
-
 
 
 ### 2. Run the benchmarks
