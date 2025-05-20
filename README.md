@@ -1,35 +1,33 @@
-# Instruction lab 7 - CUDA Graphs
+# Instruction lab 7 - CUDA vs CUDA Graphs
 
-### Clone the repository 
+### 1. Clone the repository 
 
-Familiarize yourself with the [NPB-GPU repository](https://github.com/GMAP/NPB-GPU). Check which benchmarks are available. Pay special attention to the concept of **classes**.
+In separate directory clone the [task repository](https://github.com/odiakun/lab_7_classes).
 
-Also, clone the repository [NPB-GPU-CUDA-Graphs](https://github.com/odiakun/NPB-GPU-CUDA-Graphs).
+> This script runs benchmarks LU, CG, EP in both CUDA and CUDA Graphs versions and collects results.
 
-### Run the benchmarks
 
-Review the instructions on how to compile the benchmark files for a given **class**.
 
-It is recommended to compile and run the following benchmarks: `LU, CG, and EP`, for classes `W` and `A`, using `nsys` for profiling.
+### 2. Run the benchmarks
 
-Use the following command structure:
-
-```
-nsys profile --stats=true --trace=cuda -o <prolining data name> <binary file>
+```bash
+chmod +x run_all.sh
+./run_all.sh
 ```
 
-Pay attention to:
-- The __total execution time__
-- The __number of kernel launches__
+> Results, including timing and profiling data will be saved in the `$(pwd)/profiling_outputs/` directory. \
+Profiling data itself will be saved to the `$(pwd)/nsys_reports/`.
 
-### Core task
+### 3. Investigate the results
 
-Create a comparison between:
-- Execution time
-- Number of kernel launches
+Compare __total execution time__ and __number of kernel launches__ for each benchmark(LU, CG, EP) between CUDA and CUDA Graphs.
+You can extract this information from the `.txt` output or `nsys stats`.
 
-for each benchmark (LU, CG, EP) run with and without CUDA Graphs.
+> Which implementation is faster? \
+> Which one has fewer kernel lauches?\
+> Are the performance differences consistent accross benchmarks?
 
-> What differences do you observe?
+### To satisfy your curiosity
 
+For more details about the implementation, benchmark evolution, and task descriptions, visit the [original NPB-GPU repository](https://github.com/GMAP/NPB-GPU).
 
