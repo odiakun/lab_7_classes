@@ -2,7 +2,7 @@
 
 set -e
 
-BENCHMARKS=("lu" "cg" "ep")
+BENCHMARKS=("lu" "ep")
 CLASSES=("W" "A")
 
 VERSIONS=("cuda" "graphs")
