@@ -41,6 +41,7 @@ done
 mkdir -p nsys_reports
 mkdir -p profiling_outputs
 
+sleep 1
 
 for i in "${!VERSIONS[@]}"; do
     version="${VERSIONS[$i]}"
